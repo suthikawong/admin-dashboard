@@ -1,11 +1,12 @@
 import React from 'react'
 import styles from '@/app/ui/dashboard/products/addProduct/addProduct.module.css'
+import { addProduct } from '@/app/lib/actions'
 
 function AddProductPage() {
   return (
     <div className={styles.container}>
       <form
-        action=""
+        action={addProduct}
         className={styles.form}
       >
         <input

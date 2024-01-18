@@ -1,11 +1,12 @@
 import React from 'react'
 import styles from '@/app/ui/dashboard/users/addUser/addUser.module.css'
+import { addUser } from '@/app/lib/actions'
 
 function AddUserPage() {
   return (
     <div className={styles.container}>
       <form
-        action=""
+        action={addUser}
         className={styles.form}
       >
         <input
@@ -35,12 +36,7 @@ function AddUserPage() {
           name="isAdmin"
           id="isAdmin"
         >
-          <option
-            value={false}
-            selected
-          >
-            Is Admin?
-          </option>
+          <option value={false}>Is Admin?</option>
           <option value={true}>Yes</option>
           <option value={false}>No</option>
         </select>
@@ -48,12 +44,7 @@ function AddUserPage() {
           name="isActive"
           id="isActive"
         >
-          <option
-            value={true}
-            selected
-          >
-            Is Active?
-          </option>
+          <option value={true}>Is Active?</option>
           <option value={true}>Yes</option>
           <option value={false}>No</option>
         </select>
